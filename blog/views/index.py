@@ -106,8 +106,8 @@ all_blog_posts = [
 def index():
     return render_template('index.html', posts=all_blog_posts)
 
-@app.route('/<post>', methods=['GET'])
-@app.route('/<post>.html', methods=['GET'])
+@app.route('/post/<post>', methods=['GET'])
+@app.route('/post/<post>.html', methods=['GET'])
 def blog_post(post):
     return render_template('{}.html'.format(post))
 
