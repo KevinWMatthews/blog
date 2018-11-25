@@ -35,9 +35,23 @@ FLASK_ENV=production            # Run with production servers
 
 ### Run
 
+Run flask development server:
 ```
 $ flask run
 ```
+
+Generate static content and server:
+```
+$ python blog.py --test
+```
+
+Generate static content only:
+```
+$ python blog.py --build
+```
+
+Frozen-Flask puts files in `app/build` by default.
+
 
 
 ## Links
