@@ -104,7 +104,12 @@ all_blog_posts = [
 @app.route('/index', methods=['GET'])
 @app.route('/index.html', methods=['GET'])
 def index():
-    return render_template('index.html', posts=all_blog_posts)
+    tags = []
+    for post in all_blog_posts:
+        for tag in post.tags:
+            if tag not in tags:
+                tags.append(tag)
+    return render_template('index.html', posts=all_blog_posts, tags=tags)
 
 @app.route('/post/<post>', methods=['GET'])
 @app.route('/post/<post>.html', methods=['GET'])

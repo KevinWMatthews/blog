@@ -33,6 +33,13 @@
 
 {% block content %}
 	<section>
+		<p>
+			{%- for tag in tags %}
+			<a href="{{ url_for('blog_by_category', category=tag) }}">{{ tag }}</a>&nbsp;
+			{%- endfor %}
+		</p>
+	</section>
+	<section>
 		{%- for post in posts %}
 		<article class="blog-card">
 			{%- if not post.url %}
