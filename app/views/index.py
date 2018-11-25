@@ -1,4 +1,4 @@
-from blog import app, blog_post
+from app import app, blog_post
 from flask import render_template, redirect, url_for, flash
 
 all_blog_posts = [
