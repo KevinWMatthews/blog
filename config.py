@@ -1,2 +1,4 @@
+import os
+
 class Config(object):
-    pass
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'debug'
