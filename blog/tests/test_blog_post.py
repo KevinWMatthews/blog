@@ -1,5 +1,5 @@
 import unittest
-from personal_website import blog_post
+from blog import blog_post
 
 class TestBlogPost(unittest.TestCase):
     def setUp(self):

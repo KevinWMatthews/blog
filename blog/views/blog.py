@@ -1,4 +1,4 @@
-from personal_website import app, blog_post
+from blog import app, blog_post
 from flask import render_template, redirect, url_for, flash
 
 all_blog_posts = [
@@ -100,23 +100,29 @@ all_blog_posts = [
     ),
 ]
 
-@app.route('/blog/', methods=['GET'])
-def blog_home():
-    return render_template('blog_home.html', posts=all_blog_posts)
+@app.route('/', methods=['GET'])
+@app.route('/index', methods=['GET'])
+@app.route('/index.html', methods=['GET'])
+def index():
+    return render_template('index.html', posts=all_blog_posts)
 
-@app.route('/blog/<post>.html', methods=['GET'])
+@app.route('/<post>', methods=['GET'])
+@app.route('/<post>.html', methods=['GET'])
 def blog_post(post):
     return render_template('{}.html'.format(post))
 
-@app.route('/blog/about-me.html', methods=['GET'])
+@app.route('/about-me', methods=['GET'])
+@app.route('/about-me.html', methods=['GET'])
 def about_me():
     return render_template('blog_about_me.html')
 
-@app.route('/blog/about-this-blog.html', methods=['GET'])
-def blog_about():
+@app.route('/about-this-blog', methods=['GET'])
+@app.route('/about-this-blog.html', methods=['GET'])
+def about_blog():
     return render_template('blog_about.html')
 
-@app.route('/blog/category/<category>.html', methods=['GET'])
+@app.route('/category/<category>', methods=['GET'])
+@app.route('/category/<category>.html', methods=['GET'])
 def blog_by_category(category):
     # Convert to database - do this just to get off the ground.
     # Sanitize input!!
@@ -128,7 +134,7 @@ def blog_by_category(category):
 
     if not posts_in_category:
         flash('Category not found')
-        return redirect(url_for('blog_home'))
+        return redirect(url_for('index'))
 
     flash('Category: {}'.format(category))
-    return render_template('blog_home.html', posts=posts_in_category)
+    return render_template('index.html', posts=posts_in_category)
