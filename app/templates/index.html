@@ -13,11 +13,11 @@
 	{% with messages = get_flashed_messages() -%}
 	{% if messages %}
 	<section class="messages">
-		<div>
+		<ul class="no-bullets">
 			{% for message in messages -%}
-			{{ message }}
+			<li>{{ message }}</li>
 			{%- endfor %}
-		</div>
+		</ul>
 	</section>
 	{%- endif %}
 	{%- endwith %}
