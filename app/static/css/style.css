@@ -17,7 +17,8 @@
         [navbar] 15vh
         [header] 25vh
         [messages] minmax(0, min-content)
-        auto;
+        [content] auto
+        [footer] 25vh;
     grid-template-areas:
         "navbar navbar navbar navbar"
         ". header header ."
@@ -45,6 +46,7 @@ section.posts {
 }
 footer {
     grid-area: footer;
+    align-self: end;
 }
 
 /* Generic elements */
