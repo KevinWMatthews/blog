@@ -33,9 +33,9 @@
 {% block content %}
 	<section class="tags">
 		<h4>Tags</h4>
-		<ul class="no-bullets">
+		<ul class="tag-list no-bullets">
 			{%- for tag in tags %}
-			<li><a href="{{ url_for('blog_by_category', category=tag) }}">{{ tag }}</a>&nbsp;</li>
+			<li><a class="header-link" href="{{ url_for('blog_by_category', category=tag) }}">{{ tag }}</a>&nbsp;</li>
 			{%- endfor %}
 		</ul>
 	</section>
