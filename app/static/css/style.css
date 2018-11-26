@@ -62,9 +62,6 @@ section.tags {
 section.tags > h4 {
     border-bottom: 1px solid var(--nav-color);
 }
-footer {
-    border-top: 1px solid var(--nav-color);
-}
 nav {
     background-color: var(--background-color);
     font-size: 18px;
