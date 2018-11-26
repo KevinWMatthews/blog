@@ -130,25 +130,23 @@ def about_me():
 def about_blog():
     return render_template('blog_about.html')
 
-@app.route('/category/<category>', methods=['GET'])
-@app.route('/category/<category>.html', methods=['GET'])
-def blog_by_category(category):
+@app.route('/tags/<filter>', methods=['GET'])
+@app.route('/tags/<filter>.html', methods=['GET'])
+def index_filtered_by_tag(filter):
     # Convert to database - do this just to get off the ground.
     # Sanitize input!!
-    posts_in_category = []
+    posts_with_tag = []
     for post in all_blog_posts:
         for tag in post.tags:
-            if tag == category:
-                posts_in_category.append(post)
+            if tag == filter:
+                posts_with_tag.append(post)
 
-    if not posts_in_category:
-        flash('Category not found')
+    if not posts_with_tag:
+        flash('Tag not found: {}'.format(filter))
         return redirect(url_for('index'))
 
-    flash('Category: {}'.format(category))
-
-    tags = get_tag_list()
+    all_tags = get_tag_list()
     return render_template('index.html',
-        posts=posts_in_category,
-        tags=tags,
-        filter=category)
+        posts=posts_with_tag,
+        tags=all_tags,
+        filter=filter)
