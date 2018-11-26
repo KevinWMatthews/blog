@@ -13,11 +13,12 @@
 .grid-container {
     display: grid;
     grid-template-columns: var(--margin) 3fr 1fr var(--margin);
+    grid-template-rows: 15vh auto;
     grid-template-areas:
         "navbar navbar navbar navbar"
-        "sidebar header header ."
-        "sidebar messages messages ."
-        "sidebar content content ."
+        ". header header ."
+        ". messages messages ."
+        ". content content sidebar"
         ". footer footer ."
 }
 nav {
