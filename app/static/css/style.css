@@ -1,8 +1,8 @@
 :root {
     --background-color: white;
-    --primary-color: grey;
+    --primary-color: darkslategrey;
     --text-color: black;
-    --border-color: black;
+    --border-color: grey;
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
     --margin: 20vw;
