@@ -27,7 +27,7 @@ footer {
     border-top: 1px solid var(--nav-color);
 }
 nav {
-    background-color: var(--nav-color);
+    background-color: var(--background-color);
     text-align: left;
     font-size: 14px;
 }
@@ -83,7 +83,7 @@ footer {
 
 .nav-link {
     display: block;
-    color: var(--background-color);
+    color: var(--text-color);
     text-decoration-line: none;
     padding-top: 10px;
     padding-bottom: 10px;
