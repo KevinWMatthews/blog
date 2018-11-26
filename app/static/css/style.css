@@ -1,5 +1,6 @@
 :root {
     --background-color: white;
+    --secondary-background-color: gainsboro;
     --primary-color: darkslategrey;
     --text-color: black;
     --border-color: grey;
@@ -106,11 +107,11 @@ strong {
 }
 .messages {
     text-align: left;
-    margin-top: 2vh;
     padding: 3vh 2vh 3vh 2vh;
     border: 1px solid var(--border-color);
     font-weight: bold;
     color: var(--text-color);
+    background-color: var(--secondary-background-color);
 }
 .no-bullets {
     list-style-type: none;
