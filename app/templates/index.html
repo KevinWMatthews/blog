@@ -32,10 +32,12 @@
 
 {% block content %}
 	<section class="tags">
-		<h4>Categories</h4>
-		{%- for tag in tags %}
-		<a href="{{ url_for('blog_by_category', category=tag) }}">{{ tag }}</a>&nbsp;
-		{%- endfor %}
+		<h4>Tags</h4>
+		<ul class="no-bullets">
+			{%- for tag in tags %}
+			<li><a href="{{ url_for('blog_by_category', category=tag) }}">{{ tag }}</a>&nbsp;</li>
+			{%- endfor %}
+		</ul>
 	</section>
 	<section class="posts">
 		{%- for post in posts %}

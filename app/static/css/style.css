@@ -87,8 +87,6 @@ strong {
 }
 .nav-list {
     flex: 1;
-    list-style-type: none;
-    padding: 0;
     justify-content: flex-end;
 }
 .nav-link {
@@ -106,6 +104,10 @@ strong {
     border: 1px solid var(--nav-color);
     font-weight: bold;
     color: var(--text-color);
+}
+.no-bullets {
+    list-style-type: none;
+    padding: 0;
 }
 .blog-card {
     box-sizing: border-box;
