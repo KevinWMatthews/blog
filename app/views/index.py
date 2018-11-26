@@ -100,15 +100,19 @@ all_blog_posts = [
     ),
 ]
 
-@app.route('/', methods=['GET'])
-@app.route('/index', methods=['GET'])
-@app.route('/index.html', methods=['GET'])
-def index():
+def get_tag_list():
     tags = []
     for post in all_blog_posts:
         for tag in post.tags:
             if tag not in tags:
                 tags.append(tag)
+    return tags
+
+@app.route('/', methods=['GET'])
+@app.route('/index', methods=['GET'])
+@app.route('/index.html', methods=['GET'])
+def index():
+    tags = get_tag_list()
     return render_template('index.html', posts=all_blog_posts, tags=tags)
 
 @app.route('/post/<post>', methods=['GET'])
@@ -142,4 +146,6 @@ def blog_by_category(category):
         return redirect(url_for('index'))
 
     flash('Category: {}'.format(category))
-    return render_template('index.html', posts=posts_in_category)
+
+    tags = get_tag_list()
+    return render_template('index.html', posts=posts_in_category, tags=tags)
