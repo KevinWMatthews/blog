@@ -2,7 +2,7 @@
     --background-color: white;
     --primary-color: grey;
     --text-color: black;
-    --nav-color: black;
+    --border-color: black;
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
     --margin: 20vw;
@@ -66,7 +66,7 @@ section.tags {
     margin-left: var(--margin2);
 }
 section.tags > h4 {
-    border-bottom: 1px solid var(--nav-color);
+    border-bottom: 1px solid var(--border-color);
 }
 nav {
     background-color: var(--background-color);
@@ -107,7 +107,7 @@ strong {
     text-align: left;
     margin-top: 2vh;
     padding: 3vh 2vh 3vh 2vh;
-    border: 1px solid var(--nav-color);
+    border: 1px solid var(--border-color);
     font-weight: bold;
     color: var(--text-color);
 }
@@ -128,8 +128,7 @@ strong {
     padding-bottom: 1vh;
     padding-left: 2vh;
     padding-right: 2vh;
-    border-style: solid;
-    border-width: 1px;
+    border-bottom: 1px solid var(--border-color);
     text-align: left;
 }
 .blog-post {
