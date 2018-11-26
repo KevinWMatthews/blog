@@ -17,7 +17,7 @@
     grid-template-areas:
         "navbar navbar navbar navbar"
         ". header header ."
-        ". messages messages ."
+        ". messages messages sidebar"
         ". content content sidebar"
         ". footer footer ."
 }
