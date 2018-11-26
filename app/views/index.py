@@ -148,4 +148,7 @@ def blog_by_category(category):
     flash('Category: {}'.format(category))
 
     tags = get_tag_list()
-    return render_template('index.html', posts=posts_in_category, tags=tags)
+    return render_template('index.html',
+        posts=posts_in_category,
+        tags=tags,
+        filter=category)
