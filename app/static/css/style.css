@@ -6,6 +6,7 @@
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
     --margin: 20vw;
+    --margin2: 15px;
 }
 
 /* Grid */
@@ -50,7 +51,13 @@ header {
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
-section {
+section.tags {
+    text-align: left;
+    margin-right: var(--margin2);
+    margin-left: var(--margin2);
+}
+section.tags > h4 {
+    border-bottom: 1px solid var(--nav-color);
 }
 footer {
     border-top: 1px solid var(--nav-color);
@@ -58,7 +65,9 @@ footer {
 nav {
     background-color: var(--background-color);
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
+    padding-right: var(--margin2);
+    padding-left: var(--margin2);
 }
 code {
     background-color: var(--code-background-color);
@@ -80,9 +89,6 @@ strong {
     display: block;
     color: var(--text-color);
     text-decoration-line: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 7px;
 }
 .nav-link:hover {
     color: var(--primary-color);
