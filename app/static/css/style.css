@@ -17,21 +17,16 @@
     grid-template-rows:
         [navbar] 15vh
         [header] 35vh
-        [messages] minmax(0, min-content)
         [content] auto
         [footer] 25vh;
     grid-template-areas:
         "navbar navbar navbar navbar"
         ". header header ."
-        ". messages messages sidebar"
         ". content content sidebar"
         ". footer footer ."
 }
 nav {
     grid-area: navbar;
-}
-section.messages {
-    grid-area: messages;
 }
 header {
     grid-area: header;
@@ -104,14 +99,6 @@ strong {
 }
 .nav-link:hover {
     color: var(--primary-color);
-}
-.messages {
-    text-align: left;
-    padding: 3vh 2vh 3vh 2vh;
-    border: 1px solid var(--border-color);
-    font-weight: bold;
-    color: var(--text-color);
-    background-color: var(--secondary-background-color);
 }
 .no-bullets {
     list-style-type: none;

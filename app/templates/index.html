@@ -9,20 +9,6 @@
 {% include '_blog_navbar.html' %}
 {%- endblock navbar %}
 
-{% block flash -%}
-	{% with messages = get_flashed_messages() -%}
-	{% if messages %}
-	<section class="messages">
-		<ul class="no-bullets">
-			{% for message in messages -%}
-			<li>{{ message }}</li>
-			{%- endfor %}
-		</ul>
-	</section>
-	{%- endif %}
-	{%- endwith %}
-{%- endblock flash %}
-
 {% block header %}
 	<header>
 		<h1>{{ '{{' }} Blog Name Here {{ '}}' }}</h1>

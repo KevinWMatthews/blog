@@ -1,5 +1,5 @@
 from app import app, blog_post
-from flask import render_template, redirect, url_for, flash
+from flask import render_template, redirect, url_for
 
 all_blog_posts = [
     blog_post.BlogPost(
@@ -140,10 +140,6 @@ def index_filtered_by_tag(filter):
         for tag in post.tags:
             if tag == filter:
                 posts_with_tag.append(post)
-
-    if not posts_with_tag:
-        flash('Tag not found: {}'.format(filter))
-        return redirect(url_for('index'))
 
     all_tags = get_tag_list()
     return render_template('index.html',
