@@ -33,6 +33,9 @@ header {
 section.tags {
     grid-area: sidebar;
 }
+section {
+    grid-area: content;
+}
 section.posts {
     grid-area: content;
 }
