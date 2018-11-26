@@ -14,8 +14,9 @@
     display: grid;
     grid-template-columns: var(--margin) 3fr 1fr var(--margin);
     grid-template-areas:
-        "navbar header header ."
-        "navbar messages messages ."
+        "navbar navbar navbar navbar"
+        "sidebar header header ."
+        "sidebar messages messages ."
         "sidebar content content ."
         ". footer footer ."
 }
@@ -47,8 +48,6 @@ body {
     text-align: center;
 }
 header {
-    border-bottom: 1px solid var(--nav-color);
-    padding-top: 3vh;
     padding-bottom: 3vh;
 }
 section.tags {
@@ -64,10 +63,7 @@ footer {
 }
 nav {
     background-color: var(--background-color);
-    text-align: left;
     font-size: 18px;
-    padding-right: var(--margin2);
-    padding-left: var(--margin2);
 }
 code {
     background-color: var(--code-background-color);
@@ -84,14 +80,20 @@ pre > code {
 strong {
     color: var(--text-color);
 }
+
+.flex {
+    display: flex;
+}
 .nav-list {
+    flex: 1;
     list-style-type: none;
     padding: 0;
+    justify-content: flex-end;
 }
 .nav-link {
-    display: block;
     color: var(--text-color);
     text-decoration-line: none;
+    margin: 1em;
 }
 .nav-link:hover {
     color: var(--primary-color);
