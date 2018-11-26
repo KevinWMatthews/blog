@@ -13,7 +13,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: var(--margin) 3fr 1fr var(--margin);
-    grid-template-rows: 15vh auto;
+    grid-template-rows:
+        [navbar] 15vh
+        [header] 25vh
+        [messages] minmax(0, min-content)
+        auto;
     grid-template-areas:
         "navbar navbar navbar navbar"
         ". header header ."
