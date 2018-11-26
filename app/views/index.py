@@ -14,7 +14,7 @@ all_blog_posts = [
         '''Construct from this skeleton
         <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">
         this GitHub repo</a>.''',
-        ['C', 'stdlib'],
+        ['C', 'C-stdlib'],
     ),
     blog_post.BlogPost(
         '',
@@ -96,7 +96,7 @@ all_blog_posts = [
         '''Coming soon.... At some point everyone does it. Why not do it well? Based on
         <a href="https://github.com/KevinWMatthews/bash-arg_parse" class="in-text-link">
         this GitHub repo</a>.''',
-        ['bash'],
+        ['Bash'],
     ),
 ]
 
