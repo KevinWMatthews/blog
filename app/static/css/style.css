@@ -5,7 +5,7 @@
     --nav-color: black;
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
-    --margin: 15%;
+    --margin: 10vw;
 }
 
 /* Generic elements */
@@ -17,19 +17,13 @@ body {
     text-align: center;
 }
 header {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
     border-bottom: 1px solid var(--nav-color);
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
 section {
-    margin-right: var(--margin);
-    margin-left: var(--margin);
 }
 footer {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
     border-top: 1px solid var(--nav-color);
 }
 nav {
@@ -57,21 +51,20 @@ strong {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--margin) 3fr 1fr var(--margin);
     grid-template-areas:
-        "navbar navbar"
-        "messages messages"
-        "header header"
-        "sidebar sidebar"
-        "content content"
-        "footer footer"
+        "navbar navbar navbar navbar"
+        ". header header ."
+        ". messages messages ."
+        ". content sidebar ."
+        ". footer footer ."
 }
 
 nav {
     grid-area: navbar;
 }
 
-.messages {
+section.messages {
     grid-area: messages;
 }
 
