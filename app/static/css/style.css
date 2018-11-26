@@ -5,7 +5,7 @@
     --nav-color: black;
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
-    --margin: 10vw;
+    --margin: 20vw;
 }
 
 /* Generic elements */
@@ -27,11 +27,9 @@ footer {
     border-top: 1px solid var(--nav-color);
 }
 nav {
-    top: 0;
-    position: sticky;
-    height: 7vh;
     background-color: var(--nav-color);
     text-align: left;
+    font-size: 14px;
 }
 code {
     background-color: var(--code-background-color);
@@ -53,10 +51,9 @@ strong {
     display: grid;
     grid-template-columns: var(--margin) 3fr 1fr var(--margin);
     grid-template-areas:
-        "navbar navbar navbar navbar"
-        ". header header ."
-        ". messages messages ."
-        ". content sidebar ."
+        "navbar header header ."
+        "navbar messages messages ."
+        "navbar content sidebar ."
         ". footer footer ."
 }
 
@@ -84,17 +81,13 @@ footer {
     grid-area: footer;
 }
 
-.nav-wrap {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-}
 .nav-link {
+    display: block;
     color: var(--background-color);
     text-decoration-line: none;
-    padding-left: 3vh;
-    padding-right: 3vh;
-    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 7px;
 }
 .nav-link:hover {
     color: var(--primary-color);
