@@ -15,7 +15,7 @@
     grid-template-columns: var(--margin) 3fr 1fr var(--margin);
     grid-template-rows:
         [navbar] 15vh
-        [header] 25vh
+        [header] 35vh
         [messages] minmax(0, min-content)
         [content] auto
         [footer] 25vh;
@@ -59,6 +59,7 @@ body {
 }
 header {
     padding-bottom: 3vh;
+    align-self: center;
 }
 section.tags {
     text-align: left;
@@ -70,7 +71,7 @@ section.tags > h4 {
 }
 nav {
     background-color: var(--background-color);
-    font-size: 18px;
+    font-size: 24px;
 }
 code {
     background-color: var(--code-background-color);
