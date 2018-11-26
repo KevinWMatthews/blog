@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}404 Page Not Found {% endblock title %}
+
+{% block styles %}{%- endblock styles %}
+
+{% block navbar %}
+{% include '_blog_navbar.html' %}
+{%- endblock navbar %}
+
+{% block header %}
+	<header>
+		<h1>{{ '{{' }} Blog Not Here... {{ '}}' }}</h1>
+	</header>
+{%- endblock header %}
+
+{% block content %}
+	<section>
+		<h2>Oops!</h2>
+		<p>This page doesn't seem to exist.</p>
+	</section>
+{%- endblock content %}
+
+{%- block footer %}{%- endblock footer %}

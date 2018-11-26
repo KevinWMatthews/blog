@@ -141,6 +141,9 @@ def index_filtered_by_tag(filter):
             if tag == filter:
                 posts_with_tag.append(post)
 
+    if not posts_with_tag:
+        return render_template('404.html'), 404
+
     all_tags = get_tag_list()
     return render_template('index.html',
         posts=posts_with_tag,

@@ -21,6 +21,11 @@ if __name__ == '__main__':
 
     from flask_frozen import Freezer
     freezer = Freezer(app)
+
+    @freezer.register_generator
+    def error_handlers():
+        yield "/404"
+
     if args.build:
         freezer.freeze()
     elif args.test:
