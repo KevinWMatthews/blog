@@ -84,7 +84,10 @@ pre > code {
 strong {
     color: var(--text-color);
 }
-
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
 .nav-link {
     display: block;
     color: var(--text-color);
