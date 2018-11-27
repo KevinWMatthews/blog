@@ -42,8 +42,3 @@ if __name__ == '__main__':
         source = Path('netlify') / file
         target = Path('app/build') / file
         shutil.copy(str(source), str(target))
-
-        file = Path('runtime.txt')
-        source = Path('netlify') / file
-        target = Path('.') / file
-        shutil.copy(str(source), str(target))
