@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     @freezer.register_generator
     def error_handlers():
-        yield "/404"
+        yield "/404.html"
 
     if args.build:
         freezer.freeze()
