@@ -12,6 +12,3 @@ test.cfg
 
 # Results of static site generation
 app/build/
-
-# Results of Netlify deploy
-runtime.txt
