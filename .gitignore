@@ -10,5 +10,8 @@ test.cfg
 # Ignore local environment file
 .env
 
-# Ignore python build directories
-build/
+# Results of static site generation
+app/build/
+
+# Results of Netlify deploy
+runtime.txt
