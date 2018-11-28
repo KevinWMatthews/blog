@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: var(--margin) auto var(--margin);
     grid-template-rows:
-        [navbar] 15vw
+        [navbar] minmax(15vw, auto)
         [header] minmax(5vh, auto)
         [content] auto
         [footer] 25vh;
@@ -93,14 +93,20 @@ strong {
 .flex {
     display: flex;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     button.menu-trigger {
         display: block;
+    }
+    .nav-list > li {
+        margin: 1.0rem 0.5rem;
+        box-sizing: border-box;
     }
 }
 @media screen and (min-width: 1024px) {
     .nav-list {
         display: flex;
+        flex: 1;
+        justify-content: flex-end;
     }
     button.menu-trigger {
         display: none;
@@ -119,8 +125,6 @@ button.menu-trigger {
 }
 
 .nav-list {
-    flex: 1;
-    justify-content: flex-end;
 }
 .nav-link {
     color: var(--text-color);
