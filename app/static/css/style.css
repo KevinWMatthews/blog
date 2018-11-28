@@ -25,6 +25,11 @@
         ". content sidebar"
         ". footer ."
 }
+@media screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 5vh auto 5vh;
+    }
+}
 nav {
     grid-area: navbar;
 }
