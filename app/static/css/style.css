@@ -9,6 +9,7 @@
     --margin: 20vw;
     --margin2: 15px;
     --mobile-nav-height: 200px;
+    --mobile-nav-color: gainsboro;
 }
 
 /* Grid */
@@ -54,11 +55,14 @@ footer {
 /* Generic elements */
 html {
     scroll-behavior: smooth;
+    background-color: var(--mobile-nav-color);
 }
 body {
     margin: 0;
     text-align: center;
     box-sizing: border-box;
+    transition: transform 0.5s;
+    background-color: var(--background-color);
 }
 header {
     align-self: top;
@@ -110,7 +114,7 @@ strong {
         display: block;
         position: absolute;
         top: calc(-1 * var(--mobile-nav-height));
-
+        text-align: left;
     }
     .nav-list > li {
         margin: 1.0rem 0.5rem;
