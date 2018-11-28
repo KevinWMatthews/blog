@@ -8,6 +8,7 @@
     --code-border-color: #808080;
     --margin: 20vw;
     --margin2: 15px;
+    --mobile-nav-height: 200px;
 }
 
 /* Grid */
@@ -89,16 +90,27 @@ pre > code {
 strong {
     color: var(--text-color);
 }
-
 .flex {
     display: flex;
 }
 .flex-wrap {
     flex-wrap: wrap;
 }
+.hide {
+    display: none;
+}
 @media screen and (max-width: 1023px) {
     button.menu-trigger {
         display: block;
+    }
+    body.show-nav {
+        transform: translateY(var(--mobile-nav-height));
+    }
+    .nav-list {
+        display: block;
+        position: absolute;
+        top: calc(-1 * var(--mobile-nav-height));
+
     }
     .nav-list > li {
         margin: 1.0rem 0.5rem;
@@ -106,6 +118,9 @@ strong {
     }
 }
 @media screen and (min-width: 1024px) {
+    body.show-nav {
+        transform: translateY(0);
+    }
     .nav-list {
         display: flex;
         flex: 1;

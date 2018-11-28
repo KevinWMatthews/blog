@@ -5,6 +5,10 @@
 {% block styles %}
 {%- endblock styles %}
 
+{% block deferred_scripts %}
+	<script defer src={{ url_for('static', filename='index.js') }}></script>
+{%- endblock deferred_scripts %}
+
 {% block navbar %}
 {% include '_blog_navbar.html' %}
 {%- endblock navbar %}

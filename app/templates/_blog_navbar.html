@@ -1,10 +1,10 @@
 	<nav>
 		<div class="flex flex-wrap">
 			<a href="https://www.kevinwmatthews.com/" class="nav-link">Kevin W Matthews</a>
-			<button type="button" class="menu-trigger">
+			<button type="button" class="menu-trigger" id="menu_trigger">
 				<i class="material-icons md-36">menu</i>
 			</button>
-			<ul class="nav-list no-bullets">
+			<ul class="nav-list no-bullets hide">
 				<li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
 				<li><a href="{{ url_for('about_me') }}" class="nav-link">About Me</a></li>
 				<li><a href="{{ url_for('about_blog') }}" class="nav-link">About This Blog</a></li>
