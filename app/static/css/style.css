@@ -51,7 +51,19 @@ footer {
     grid-area: footer;
     align-self: end;
 }
-
+h1 {
+    font-size: 32px;
+}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 18px;
+    }
+}
 /* Generic elements */
 html {
     scroll-behavior: smooth;
