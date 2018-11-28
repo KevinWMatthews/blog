@@ -13,17 +13,17 @@
 /* Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: var(--margin) 3fr 1fr var(--margin);
+    grid-template-columns: var(--margin) auto var(--margin);
     grid-template-rows:
         [navbar] 15vh
         [header] 35vh
         [content] auto
         [footer] 25vh;
     grid-template-areas:
-        "navbar navbar navbar navbar"
-        ". header header ."
-        ". content content sidebar"
-        ". footer footer ."
+        "navbar navbar navbar"
+        "header header header"
+        ". content sidebar"
+        ". footer ."
 }
 nav {
     grid-area: navbar;
