@@ -15,8 +15,8 @@
     display: grid;
     grid-template-columns: var(--margin) auto var(--margin);
     grid-template-rows:
-        [navbar] 15vh
-        [header] 35vh
+        [navbar] 15vw
+        [header] minmax(5vh, auto)
         [content] auto
         [footer] 25vh;
     grid-template-areas:
@@ -54,8 +54,7 @@ body {
     text-align: center;
 }
 header {
-    padding-bottom: 3vh;
-    align-self: center;
+    align-self: top;
 }
 section.tags {
     text-align: left;
