@@ -2,6 +2,7 @@
     --background-color: white;
     --secondary-background-color: gainsboro;
     --primary-color: darkslategrey;
+    --highlight-color: #b0b0b0;
     --text-color: black;
     --border-color: grey;
     --code-background-color: #e0e0e0;
@@ -65,6 +66,10 @@ footer {
 }
 h1 {
     font-size: 32px;
+}
+a:focus {
+    background-color: var(--highlight-color);
+    outline: none;
 }
 @media screen and (max-width: 500px) {
     h1 {
