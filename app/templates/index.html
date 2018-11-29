@@ -25,14 +25,6 @@
 {%- endblock header %}
 
 {% block content %}
-	<section class="tags">
-		<h3>Tags</h3>
-		<ul class="tag-list no-bullets">
-			{%- for tag in tags %}
-			<li><a class="header-link" href="{{ url_for('index_filtered_by_tag', filter=tag) }}">#{{ tag }}</a>&nbsp;</li>
-			{%- endfor %}
-		</ul>
-	</section>
 	<section class="posts">
 		{%- for post in posts %}
 		<article class="blog-card">
@@ -44,6 +36,14 @@
 			<p>{{ post.short_text|safe }}</p>
 		</article>
 		{%- endfor %}
+	</section>
+	<section class="tags">
+		<h3>Tags</h3>
+		<ul class="tag-list no-bullets">
+			{%- for tag in tags %}
+			<li><a class="header-link" href="{{ url_for('index_filtered_by_tag', filter=tag) }}">#{{ tag }}</a>&nbsp;</li>
+			{%- endfor %}
+		</ul>
 	</section>
 {%- endblock content %}
 
