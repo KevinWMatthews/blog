@@ -1,16 +1,15 @@
 :root {
-    --background-color: white;
-    --secondary-background-color: gainsboro;
-    --primary-color: darkslategrey;
-    --highlight-color: #b0b0b0;
     --text-color: black;
-    --border-color: grey;
+    --background-color: white;
+    --secondary-background-color: #9742E7;
+    --primary-color: #65009B;
+    --highlight-color: #E89C0C;
+    --border-color: #5E6868;
     --code-background-color: #e0e0e0;
     --code-border-color: #808080;
     --margin: 20vw;
     --margin2: 15px;
     --mobile-nav-height: 200px;
-    --mobile-nav-color: gainsboro;
 }
 
 /* Grid */
@@ -67,8 +66,12 @@ footer {
 h1 {
     font-size: 32px;
 }
+h1, h2, h3, h4, p {
+    color: var(--text-color);
+}
 a:focus {
-    background-color: var(--highlight-color);
+    color: var(--highlight-color);
+    text-decoration: underline;
     outline: none;
 }
 @media screen and (max-width: 500px) {
@@ -84,7 +87,7 @@ a:focus {
 /* Generic elements */
 html {
     scroll-behavior: smooth;
-    background-color: var(--mobile-nav-color);
+    background-color: var(--secondary-background-color);
 }
 body {
     margin: 0;
@@ -168,6 +171,10 @@ button.menu-trigger {
     background: none;
     outline: none;
     border: none;
+    color: var(--text-color);
+}
+button.menu-trigger:focus {
+    color: var(--highlight-color);
 }
 button::-moz-focus-inner {
     border:0;
@@ -182,7 +189,7 @@ button::-moz-focus-inner {
     margin: 1em;
 }
 .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 .no-bullets {
     list-style-type: none;
@@ -212,12 +219,12 @@ button::-moz-focus-inner {
     text-decoration-line: none;
 }
 .header-link:hover {
-    color: var(--text-color);
+    color: var(--highlight-color);
 }
 .in-text-link {
     color: var(--primary-color);
     text-decoration-line: none;
 }
 .in-text-link:hover {
-    text-decoration-line: underline;
+    color: var(--highlight-color);
 }
