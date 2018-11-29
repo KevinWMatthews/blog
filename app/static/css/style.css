@@ -122,9 +122,6 @@ strong {
 .flex {
     display: flex;
 }
-.flex-wrap {
-    flex-wrap: wrap;
-}
 .hide {
     display: none;
 }
@@ -135,9 +132,12 @@ strong {
     body.show-nav {
         transform: translateY(var(--mobile-nav-height));
     }
+    .nav-wrap {
+        justify-content: space-between;
+    }
     .nav-list {
-        display: block;
         position: absolute;
+        white-space: nowrap;
         top: calc(-1 * var(--mobile-nav-height));
         text-align: left;
     }
@@ -171,8 +171,6 @@ button::-moz-focus-inner {
     font-size: 36px;
 }
 
-.nav-list {
-}
 .nav-link {
     color: var(--text-color);
     text-decoration-line: none;
