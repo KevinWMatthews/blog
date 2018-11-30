@@ -12,6 +12,7 @@
 		{%- if self.title() %} - {% endif -%}
 		kevinwmatthews.com
 	</title>
+	<script defer src={{ url_for('static', filename='index.js') }}></script>
 	{%- block deferred_scripts %}{% endblock deferred_scripts %}
 </head>
 <body>
