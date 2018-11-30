@@ -40,14 +40,6 @@ all_blog_posts = [
     ),
     blog_post.BlogPost(
         '',
-        'Exit Callbacks using C stdlib',
-        '''Construct from
-        <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C', 'C-stdlib'],
-    ),
-    blog_post.BlogPost(
-        '',
         'CSS Effects',
         '''Coming soon... transitions, animations, and general awesomeness.''',
         ['CSS'],
@@ -57,38 +49,6 @@ all_blog_posts = [
         'CSS Layout',
         '''Coming soon... Boxen!''',
         ['CSS'],
-    ),
-    blog_post.BlogPost(
-        '',
-        'TLS in C Using OpenSSL',
-        '''Coming soon.... Experimental but functional. Based on
-        <a href="https://github.com/KevinWMatthews/c-tls_demo" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C', 'Crypto'],
-    ),
-    blog_post.BlogPost(
-        '',
-        'Simple C Socket Server',
-        '''Coming soon.... There's client, too. Based on
-        <a href="https://github.com/KevinWMatthews/c-server_demo" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C'],
-    ),
-    blog_post.BlogPost(
-        '',
-        'Varargs (variadics) in C',
-        '''Coming soon.... Closest thing to the splat operator that C can provide. Based on
-        <a href="https://github.com/KevinWMatthews/c-varargs_demo" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C'],
-    ),
-    blog_post.BlogPost(
-        '',
-        'Parsing Command Line Options in C',
-        '''Coming soon.... Better than strcmp() on argv. Based on
-        <a href="https://github.com/KevinWMatthews/c-getopt_demo" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C'],
     ),
     blog_post.BlogPost(
         '',
