@@ -9,14 +9,6 @@ all_blog_posts = [
         ['C'],
     ),
     blog_post.BlogPost(
-        'c-exit-callbacks',
-        'Exit Callbacks using C stdlib',
-        '''Construct from this skeleton
-        <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">
-        this GitHub repo</a>.''',
-        ['C', 'C-stdlib'],
-    ),
-    blog_post.BlogPost(
         '',
         'Test-Driven Design on AVR',
         '''Work in progress... based on
@@ -45,6 +37,14 @@ all_blog_posts = [
         <a href="https://youtu.be/anrOzOapJ2E" class="in-text-link">
         this talk</a>.''',
         ['Python'],
+    ),
+    blog_post.BlogPost(
+        '',
+        'Exit Callbacks using C stdlib',
+        '''Construct from
+        <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">
+        this GitHub repo</a>.''',
+        ['C', 'C-stdlib'],
     ),
     blog_post.BlogPost(
         '',
