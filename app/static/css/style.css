@@ -82,7 +82,7 @@ h1, h2, h3, h4, p {
 /* Generic elements */
 html {
     scroll-behavior: smooth;
-    background-color: var(--secondary-background-color);
+    /* background-color: var(--secondary-background-color); */
 }
 body {
     margin: 0;
