@@ -1,8 +1,10 @@
-# Personal website
+# Kevin's Blog
 
-This will be my website.
+Platform for my projects.
 
 ## Getting Started
+
+Basic instructions for development.
 
 ### Requirements
 
@@ -40,21 +42,9 @@ Run flask development server:
 $ flask run
 ```
 
-Generate static content and server:
+Generate static content for deployment to Netlify:
 ```
-$ python blog.py --test
-```
-
-Generate static content only:
-```
-$ python blog.py --build
+$ python blog.py --deploy
 ```
 
 Frozen-Flask puts files in `app/build` by default.
-
-
-
-## Links
-
-  * [Adobe Color](https://color.adobe.com/create/color-wheel/)
-  * Javascript Visualizations using [PTS](https://ptsjs.org/)
