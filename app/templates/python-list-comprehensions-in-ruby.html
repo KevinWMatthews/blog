@@ -1,0 +1,81 @@
+{% extends  "base.html" %}
+
+{% block title %}Python List Comprehensions in Ruby{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='highlight.js/styles/highlight.css') }}">
+{%- endblock styles %}
+
+{% block deferred_scripts %}
+	<script src="{{ url_for('static', filename='highlight.js/highlight_python_ruby.pack.js') }}"></script>
+	<script src="{{ url_for('static', filename='blog.js') }}"></script>
+{%- endblock deferred_scripts %}
+
+{% block navbar %}
+{% include '_blog_navbar.html' %}
+{%- endblock navbar %}
+
+{% block header %}
+	<header>
+		<h1>Python List Comprehensions... In Ruby?</h1>
+		<p>What's the Ruby way?</p>
+	</header>
+{%- endblock header %}
+
+{% block content %}
+	<section>
+		<article class="blog-post">
+			<h3>Python List Comprehensions</h3>
+			<p>The Python language has one-line, built-in syntax for creating arrays
+				(also dictionaries and sets).</p>
+<pre><code>some_numbers = range(0, 10)
+[x**2 for x in some_numbers if x % 2 != 0]
+[1, 9, 25, 49, 81]
+</code></pre>
+			<p>A little dense, but here is what's going on:</p>
+			<code>[expression for item in list if conditional]</code>
+			<p>In colloquial terms,</p>
+<pre><code># For each item in the list,
+#   if the conditional is met
+#     execute the expression
+</code></pre>
+			<p>In this specific case:</p>
+<pre><code># For each number in some_numbers,
+#   if the number is even,
+#     square the number
+</code></pre>
+			<p>Complex but simple, depending on your point of view. Powerful either way.</p>
+			<h3>Ruby Methods</h3>
+			<p>How does Ruby do the same? There doesn't seem to be a single operation
+			to do this, though this
+			<a href="https://bugs.ruby-lang.org/issues/5663">has been considered</a>
+			as a language feature.
+			Instead, Ruby forces (or allows) the user to specify the conditional and
+			the expression independently:</p>
+<pre><code>(0..10).select { |i| i.odd? }.collect { |i| i**2 }
+=> [1, 9, 25, 49, 81]
+</code></pre>
+			<p>It's a fundamentally different way of thinking about the operation:</p>
+<pre><code># For each item in the list,
+#   if the conditional is met,
+#     put the item in an array
+# For each item in the list,
+#   perform an operation
+</code></pre>
+			<p>The condition and expression are cleary two seaprate operations;
+				they require two passes through the array! But cast aside performance
+				considerations, as we're concerned about idiomatic practice. Ruby is
+				concerned with message passing. Rather than depending on a special
+				language feature, it simply calls a method on an object:
+			</p>
+<pre><code>Enumerable.select {}
+List.collect {}
+</code></pre>
+			<p>And passes each method a block.</p>
+			<h3>Real-World Example</h3>
+			<p>The above example is straightforward. What could this look like in the
+				wild?
+			</p>
+		</article>
+	</section>
+{% endblock content %}

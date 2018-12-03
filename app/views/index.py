@@ -9,6 +9,12 @@ all_blog_posts = [
         ['C'],
     ),
     blog_post.BlogPost(
+        'python-list-comprehensions-in-ruby',
+        'Python List Comprehensions... In Ruby?',
+        '''What is the Ruby way?''',
+        ['Ruby', 'syntax'],
+    ),
+    blog_post.BlogPost(
         '',
         'Test-Driven Design on AVR',
         '''Work in progress... based on
